@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+
+    <style>
+        *{
+            padding:0%;
+            margin: 0%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(46, 46, 247);
+            height: 100vh;
+            position: relative;
+        }
+        .header{
+            min-height: 60px;
+            background-color: #9ED2C6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+            color: rgb(255, 255, 255);
+        }
+        .header .logo{
+            font-size: x-large;
+        }
+
+        
+        .header button{
+            background-color: white;
+            font-size: small;
+            color: #9ED2C6 ;
+            padding:3px;
+            border-radius: 15px;
+            border: 1px solid;
+        }
+        .content{
+            background-color: white;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+        }
+        .content p{
+            padding:10px;
+            justify-content: space-between;
+        }  
+        .left{
+            width:600px;
+            background-color:#d6c9b1;
+            margin: 5px;
+
+        }
+        .right{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+        }
+        .right-up{
+            background-color:#F7ECDE;
+            
+        }
+        .right-down{
+            flex-grow: 1;
+            background-color: #E9DAC1;
+        
+        }
+        .footer{
+            background-color: rgb(29, 28, 28);
+            color: #54BAB9;
+            font-size: x-large;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            position: fixed;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">Task 1</div>
+            <div class="Nav">
+                <button onclick="Add()">Add line</button>
+                <button onclick="RemoveItems()">Remove lines</button>
+            </div>
+            <ul id="demo">
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum porro, sint magnam numquam qui maxime neque doloremque saepe facilis praesentium magni, consequuntur enim, sapiente ab temporibus veritatis eligendi eum in repellat eius possimus rerum et officia! Vel molestiae blanditiis error voluptatem consequuntur fuga accusantium possimus aperiam, voluptatum perspiciatis maxime odio aut, animi doloremque atque sunt doloribus ab. Atque voluptatibus quam, consequuntur ipsam nesciunt?</p>
+            </div>
+            <div class="right">
+                <div class="right-up">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, culpa soluta! Delectus, repellendus, maxime corporis a qui magni perferendis et non sed deleniti, itaque neque nobis dolores. Aspernatur, quidem voluptates eveniet quae ut, quod, reprehenderit consequatur fuga provident modi laborum accusamus ipsa nulla distinctio placeat dolor corporis reiciendis tenetur autem!</p>
+                </div>
+                <div class="right-down">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dignissimos? Inventore autem consequuntur rerum assumenda ea dicta eveniet odit beatae sed aliquid ducimus corporis magnam laudantium obcaecati deleniti iure, similique consectetur illum. Quis consectetur itaque officiis natus voluptas blanditiis ut recusandae! Molestias debitis quasi dolore ipsa officiis dolor. Similique, quisquam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer"><p>Footer</p></div>
+    </div>
+
+
+<script>
+function Add(){
+let demo=document.getElementById('demo');
+let result=`<li>new item</li>`;
+demo.innerHTML+=result;
+}
+function RemoveItems(){
+let demo=document.getElementById('demo');
+demo.innerHTML=" ";
+}
+</script>
+</body>
+</html>
